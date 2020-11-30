@@ -1,0 +1,32 @@
+.time {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding: 0 0 10rem 1.6rem;
+
+   &__stamp {
+      font-weight: 700;
+      color: $tertiary;
+      font-size: 6.25rem;
+   }
+
+   &__greeting-wrapper {}
+
+   &__greeting {
+      display: flex;
+      align-items: center;
+   }
+
+   &__greeting-icon {
+      margin-right: 1rem;
+   }
+
+   &__greeting-text {
+      text-transform: uppercase;
+      font-weight: 400;
+      color: $tertiary;
+      line-height: 25px;
+      letter-spacing: 3px;
+   }
+}
