@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import sun from '../assets/desktop/icon-sun.svg';
 import moon from '../assets/desktop/icon-moon.svg';
 
 const Clock = (props) => {
-   console.log(props)
-
    let getTime = () => {
       let d = new Date();
       let hr = d.getHours();
@@ -18,6 +17,16 @@ const Clock = (props) => {
 
       return currentTime;
    }
+
+   useEffect(() => {
+      axios.get('https://freegeoip.app/')
+         .then(res => {
+            const locationData = res.data;
+            console.log(locationData);
+         })
+   }, []);
+
+   const [location, setLocation] = useState('');
 
    return (
       <div className="time">

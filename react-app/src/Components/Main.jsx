@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/main.css';
 // import Quote from './Quote';
 import Clock from './Clock';
@@ -9,6 +9,13 @@ import nightBackground from '../assets/mobile/bg-image-nighttime.jpg';
 function Main() {
 
    const [hour, setHour] = useState(0);
+
+   // useEffect(() => {
+   //    const interval = setInterval(() => {
+   //       getTime();
+   //    }, 1000);
+   //    return () => clearInterval(interval);
+   // }, []);
 
    const getTime = () => {
       let hour = new Date().getHours();
